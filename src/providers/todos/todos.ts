@@ -16,7 +16,7 @@ export class TodosProvider {
   constructor() {
 	this.db = new PouchDB('cloudo');
 
-	this.remote = 'http://localhost/cloudo';
+	this.remote = 'http://localhost/cloudo'; 
 
 	let options = {
 	  live: true,
