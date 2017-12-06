@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
-import { TodosProvider } from '../../providers/todos/<todos></todos>';
+import { TodosProvider } from '../../providers/todos/todos';
 
 @Component({
   selector: 'page-home',
@@ -49,7 +49,6 @@ export class HomePage {
         }
       ]
     });
- 
     prompt.present();
  
   }
@@ -61,7 +60,7 @@ export class HomePage {
       message: 'Change your mind?',
       inputs: [
         {
-          name: 'title'
+          name: 'name'
         }
       ],
       buttons: [
@@ -74,7 +73,7 @@ export class HomePage {
             this.todoService.updateTodo({
               _id: todo._id,
               _rev: todo._rev,
-              name: data.title
+              name: data.name
             });
           }
         }
